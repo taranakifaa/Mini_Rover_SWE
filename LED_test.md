@@ -43,6 +43,32 @@ GPIO.output(17, GPIO.LOW) #set GPIO 17 to low (turn off led)
 time.sleep(1) #leave the LOW state on for one second
 
 ```
+Now let's try another type of LED to demonstrate TWO GPIO ports 
+```python
+
+import RPi.GPIO as GPIO # defining that we are accessing our GPIO port
+import time # time commands
+
+
+LED_RED = 17 # Activating GPIO PIN 17
+LED_BLUE = 27 # Activating GPIO PIN 27
+LED_GREEN = 22 # Activating GPIO PIN 22
+
+#cycle through the colors, this cycling is called a FSM 
+while True: # run this forever
+time.sleep(1)
+GPIO.output(17, GPIO.LOW)
+GPIO.output(27, GPIO.HIGH)
+time.sleep(1)
+GPIO.output(27, GPIO.LOW)
+GPIO.output(22, GPIO.HIGH)
+time.sleep(1)
+GPIO.output(22, GPIO.LOW)
+GPIO.output(17, GPIO.HIGH)
+time.sleep(1)
+
+```
+
 
 Similarly you can do this without an LED to see the behavior:
 <img width="1483" height="215" alt="image" src="https://github.com/user-attachments/assets/baaee14e-bc09-4feb-8d8f-de4f673eadda" />
