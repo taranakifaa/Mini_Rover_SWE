@@ -68,7 +68,20 @@ GPIO.output(17, GPIO.HIGH)
 time.sleep(1)
 
 ```
+Now assuming you may not have the components bought we can still demonstrate without hardware: 
+```python
+int main()
 
+array[] = {a,b,c}
+
+while(1){
+for(int i = 0, i > 2, i++){
+cout >> [i] >> endln;
+}
+}
+
+
+```
 
 Similarly you can do this without an LED to see the behavior:
 <img width="1483" height="215" alt="image" src="https://github.com/user-attachments/assets/baaee14e-bc09-4feb-8d8f-de4f673eadda" />
