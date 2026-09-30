@@ -28,7 +28,8 @@ How do you run the code? Here's how:
 python3 Blinking_LED_test.py
 ```
 You should see this: 
-\n <img width="496" height="372" alt="image" src="https://github.com/user-attachments/assets/9d2e1b27-6b37-4665-9402-831f4287c398" />
+
+ <img width="496" height="372" alt="image" src="https://github.com/user-attachments/assets/9d2e1b27-6b37-4665-9402-831f4287c398" />
 
 ```py
 import RPi.GPIO as GPIO # we are defining our RPI pins 
