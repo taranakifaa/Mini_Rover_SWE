@@ -8,6 +8,27 @@ Now in order to start programming we are going to do this command:
 ```bash
 nano Blinking_LED_test.py
 ```
+Now the command 'nano' brings you to a terminal based text editor: 
+Let's try this software only code to demonstrate the idea of what we want our LED to do:
+```py
+import time
+
+while True:
+print("Hello")
+time.sleep(1)
+print("Hello")
+time.sleep(1)
+```
+Once you type this out to save our code and leave the text editor: 
+```bash
+CTRL + O , ENTER , CTRL + X
+```
+How do you run the code? Here's how: 
+```bash
+python3 Blinking_LED_test.py
+```
+You should see this: 
+<img width="496" height="372" alt="image" src="https://github.com/user-attachments/assets/9d2e1b27-6b37-4665-9402-831f4287c398" />
 
 ```py
 import RPi.GPIO as GPIO # we are defining our RPI pins 
