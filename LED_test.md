@@ -32,16 +32,21 @@ You should see this:
  <img width="496" height="372" alt="image" src="https://github.com/user-attachments/assets/9d2e1b27-6b37-4665-9402-831f4287c398" />
 
 ```py
-import RPi.GPIO as GPIO # we are defining our RPI pins 
-import time #real time 
-LED_PIN = 17 #defining which pin we want to set to high (GPIO 17) see data sheet to know which pins
+import RPi.GPIO as GPIO  # Library used to control the Raspberry Pi GPIO pins
+import time              # Used to create time delays
 
-while True: # run this program forever
-GPIO.output(17, GPIO.HIGH) #set GPIO 17 to high (turn on led)
-time.sleep(1) #leave the HIGH set on for one second 
-GPIO.output(17, GPIO.LOW) #set GPIO 17 to low (turn off led)
-time.sleep(1) #leave the LOW state on for one second
+LED_PIN = 17  # Defining which GPIO pin we want to use (GPIO 17)
 
+GPIO.setmode(GPIO.BCM)        # Use the GPIO/BCM pin numbering system
+GPIO.setup(LED_PIN, GPIO.OUT) # Set GPIO 17 as an output pin
+
+while True:  # Run this program forever
+
+    GPIO.output(LED_PIN, GPIO.HIGH)  # Set GPIO 17 HIGH (turn LED on)
+    time.sleep(1)                    # Leave LED on for 1 second
+
+    GPIO.output(LED_PIN, GPIO.LOW)   # Set GPIO 17 LOW (turn LED off)
+    time.sleep(1)                    # Leave LED off for 1 second
 ```
 Now let's try another type of LED to demonstrate TWO GPIO ports 
 ```python
@@ -49,6 +54,14 @@ Now let's try another type of LED to demonstrate TWO GPIO ports
 import RPi.GPIO as GPIO # defining that we are accessing our GPIO port
 import time # time commands
 
+LED1 =17
+LED2 =27
+LED3 =22
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(LED1, GPIO.OUT)
+GPIO.setup(LED2, GPIO.OUT)
+GPIO.setup(LED3, GPIO.OUT)
 
 LED_RED = 17 # Activating GPIO PIN 17
 LED_BLUE = 27 # Activating GPIO PIN 27
